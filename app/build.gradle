@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.redrubies2"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true // resuelve error Cannot fit requested classes in a single dex file (# methods: 77563 > 65536)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation "androidx.recyclerview:recyclerview:1.1.0" //Recycle View
+    implementation 'androidx.appcompat:appcompat:1.3.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'//Room RunTime para Pojos
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.code.gson:gson:2.8.6' //Gson para Pojos
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // Para hacer imagenes como circulos
+    implementation 'com.github.bumptech.glide:glide:4.11.0' //Permite cargar imagenes desde una URL
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0' //Permite cargar imagenes desde una URL
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.8.11.1' // para pasar de json a objecto
+
+    implementation 'com.android.support:multidex:1.0.3' // resuelve error Cannot fit requested classes in a single dex file (# methods: 77563 > 65536)
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0' //sirve para implementar MVVM
+
+    //Firestore
+    implementation 'com.google.firebase:firebase-firestore:22.0.2'
+    //Para progress bar
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+    implementation 'com.itextpdf:itextg:5.5.10' //para generar pdf
+    implementation 'com.karumi:dexter:5.0.0' //para generar pdf¿
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.3'
+
+}

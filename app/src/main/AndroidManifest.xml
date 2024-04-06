@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.redrubies2">
+    <!-- Permisos de internet para retrofit -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RedRubbies"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.redrubies2.ui.views.HomeActivity"></activity>
+        <activity android:name="com.example.redrubies2.ui.views.reporte.GenerarReporteRendimientoActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.example.redrubies2.ui.views.reporte.GenerarReporteProduccionActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.example.redrubies2.ui.views.reporte.ReporteRendimientoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.menus.MenuReporteActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.despacho.RezagosEliminarIngresoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.despacho.RezagosDespachoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.cosecha.RezagosCosechaDiaActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.reporte.ReporteProduccionActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.despacho.EliminarIngresoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.despacho.ListaDespachoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.despacho.NuevoIngresoActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.example.redrubies2.ui.views.menus.MenuProcesoActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.cosecha.NuevaCosechaHoyActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.example.redrubies2.ui.views.cosecha.ListaInventarioActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.menus.MenuActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.menus.MenuCosechaActivity" />
+        <activity android:name="com.example.redrubies2.ui.views.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="com.example.redrubies2.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "935169983027",
+    "project_id": "red-rubies-2-pyf",
+    "storage_bucket": "red-rubies-2-pyf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935169983027:android:f9ddecdd34465347b75946",
+        "android_client_info": {
+          "package_name": "com.example.redrubies2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935169983027-j52ma9bipkqtuqerl2fjrsalj299dcb2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.redrubies2",
+            "certificate_hash": "7b923c650cd2af6c384ef065b30077905b9282ff"
+          }
+        },
+        {
+          "client_id": "935169983027-3dp2fecs6kmfikireqn2c6cql68hd263.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANaMGby4nHGn0Lds9gUE9Q0ZtY01Efgzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935169983027-3dp2fecs6kmfikireqn2c6cql68hd263.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
